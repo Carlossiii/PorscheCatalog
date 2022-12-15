@@ -13,6 +13,7 @@
 		673CF45C29412E1F00BA1841 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 673CF45B29412E1F00BA1841 /* Preview Assets.xcassets */; };
 		673CF4632941355300BA1841 /* FileManager-DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CF4622941355200BA1841 /* FileManager-DocumentsDirectory.swift */; };
 		673CF4652941356800BA1841 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673CF4642941356800BA1841 /* Result.swift */; };
+		67F762C829427953002E98B6 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F762C729427953002E98B6 /* CarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		673CF45B29412E1F00BA1841 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		673CF4622941355200BA1841 /* FileManager-DocumentsDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager-DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		673CF4642941356800BA1841 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		67F762C729427953002E98B6 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				673CF45429412E1D00BA1841 /* PorscheCatalogApp.swift */,
 				673CF4622941355200BA1841 /* FileManager-DocumentsDirectory.swift */,
 				673CF4642941356800BA1841 /* Result.swift */,
+				67F762C729427953002E98B6 /* CarModel.swift */,
 				673CF45629412E1D00BA1841 /* ContentView.swift */,
 				673CF45829412E1E00BA1841 /* Assets.xcassets */,
 				673CF45A29412E1F00BA1841 /* Preview Content */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				673CF4632941355300BA1841 /* FileManager-DocumentsDirectory.swift in Sources */,
+				67F762C829427953002E98B6 /* CarModel.swift in Sources */,
 				673CF45729412E1D00BA1841 /* ContentView.swift in Sources */,
 				673CF4652941356800BA1841 /* Result.swift in Sources */,
 				673CF45529412E1D00BA1841 /* PorscheCatalogApp.swift in Sources */,

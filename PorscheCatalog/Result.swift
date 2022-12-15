@@ -20,9 +20,21 @@ struct Pages: Codable, Comparable {
     let pageid: Int
     let ns: Int
     let title: String
+    let thumbnail: Thumbnail
+    let pageimage: String
     let extract: String
     
     static func <(lhs: Pages, rhs: Pages) -> Bool {
         lhs.title < rhs.title
+    }
+}
+
+struct Thumbnail: Codable, Comparable {
+    let source: String
+    let width: Int
+    let height: Int
+    
+    static func <(lhs: Thumbnail, rhs: Thumbnail) -> Bool {
+        lhs.width < rhs.width
     }
 }

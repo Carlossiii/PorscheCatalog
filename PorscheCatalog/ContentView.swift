@@ -16,14 +16,28 @@ struct ContentView: View {
     @State private var loadingState = LoadingState.loading
     @State private var pages = [Pages]()
     
+    @State private var cars: [Car] = [.category356, .category911]
+    @State private var selectedCar = 0
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
-                Section("Porsche 356") {
+                List(cars, children: \.items) { item in
+                    HStack {
+                        Button(item.name){
+                            selectedCar = item.pageId
+                            Task {
+                                await fetchNearbyPlaces()
+                            }
+                        }
+                    }
+                }
+                Section("Information about selected model:") {
                     switch loadingState {
                     case .loading:
-                        Text("Loading")
+                        Text("Loading...")
                     case .loaded:
+                        AsyncImage(url: URL(string: pages[0].thumbnail.source))
                         Text("\(pages[0].extract)")
                     case .failed:
                         Text("Please try again later.")
@@ -31,15 +45,12 @@ struct ContentView: View {
                 }
             }
             .navigationTitle("Porsche Catalog")
-            .task {
-                await fetchNearbyPlaces()
-            }
         }
     }
     
     func fetchNearbyPlaces() async {
         
-        let urlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&titles=Porsche%20356&formatversion=2&exintro=1&explaintext=1"
+        let urlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&pageids=\(selectedCar)&formatversion=2&pithumbsize=1000&exintro=1&explaintext=1"
         
         guard let url = URL(string: urlString) else {
             print("Bad URL: \(urlString)")
