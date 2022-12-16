@@ -16,40 +16,42 @@ struct ContentView: View {
     @State private var loadingState = LoadingState.loading
     @State private var pages = [Pages]()
     
-    @State private var cars: [Car] = [.category356, .category911]
+    @State private var cars: [Car] = [.porsche356, .category911, .porscheGT1, .porsche912, .porsche914, .porsche918, .porsche924, .porsche928, .porsche944, .porsche959, .porsche968, .categoryBoxter, .porscheCarreraGT, .categoryCayman, .porscheCayenne, .porscheMacan, .porschePanamera, .porscheTaycan]
     @State private var selectedCar = 0
     
     var body: some View {
         NavigationStack {
             Form {
                 List(cars, children: \.items) { item in
-                    HStack {
-                        Button(item.name){
-                            selectedCar = item.pageId
-                            Task {
-                                await fetchNearbyPlaces()
-                            }
+                    Button(item.name) {
+                        selectedCar = item.pageId
+                        Task {
+                            await fetchCarData()
                         }
                     }
-                }
-                Section("Information about selected model:") {
-                    switch loadingState {
-                    case .loading:
-                        Text("Loading...")
-                    case .loaded:
-                        AsyncImage(url: URL(string: pages[0].thumbnail.source))
-                        Text("\(pages[0].extract)")
-                    case .failed:
-                        Text("Please try again later.")
-                    }
+                    NavigationLink(value: item) { }
                 }
             }
             .navigationTitle("Porsche Catalog")
+            .navigationDestination(for: Car.self) { item in
+                Form {
+                    Section("Information about selected model:") {
+                        switch loadingState {
+                        case .loading:
+                            Text("Loading...")
+                        case .loaded:
+                            AsyncImage(url: URL(string: pages[0].thumbnail.source))
+                            Text("\(pages[0].extract)")
+                        case .failed:
+                            Text("Please try again later.")
+                        }
+                    }
+                }
+            }
         }
     }
     
-    func fetchNearbyPlaces() async {
-        
+    func fetchCarData() async {
         let urlString = "https://en.wikipedia.org/w/api.php?action=query&format=json&prop=pageimages%7Cextracts&pageids=\(selectedCar)&formatversion=2&pithumbsize=1000&exintro=1&explaintext=1"
         
         guard let url = URL(string: urlString) else {

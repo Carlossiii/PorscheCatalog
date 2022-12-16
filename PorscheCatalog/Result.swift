@@ -16,7 +16,7 @@ struct Query: Codable {
     let pages: [Pages]
 }
 
-struct Pages: Codable, Comparable {
+struct Pages: Codable, Comparable, Hashable {
     let pageid: Int
     let ns: Int
     let title: String
@@ -29,7 +29,7 @@ struct Pages: Codable, Comparable {
     }
 }
 
-struct Thumbnail: Codable, Comparable {
+struct Thumbnail: Codable, Comparable, Hashable {
     let source: String
     let width: Int
     let height: Int
