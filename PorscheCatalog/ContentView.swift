@@ -34,18 +34,36 @@ struct ContentView: View {
             }
             .navigationTitle("Porsche Catalog")
             .navigationDestination(for: Car.self) { item in
-                Form {
-                    Section("Information about selected model:") {
-                        switch loadingState {
-                        case .loading:
-                            Text("Loading...")
-                        case .loaded:
-                            AsyncImage(url: URL(string: pages[0].thumbnail.source))
-                            Text("\(pages[0].extract)")
-                        case .failed:
-                            Text("Please try again later.")
+                switch loadingState {
+                case .loading:
+                    Text("Loading...")
+                case .loaded:
+                    ScrollView {
+                        VStack {
+                            AsyncImage(url: URL(string: pages[0].thumbnail.source)) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFill()
+                            } placeholder: {
+                                ProgressView()
+                            }
+                            .frame(width: 350, height: 190)
+                            .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
+                            
+                            VStack(alignment: .leading) {
+                                
+                                RectangleView()
+                                
+                                Text("\(pages[0].extract)")
+                            }
+                            .padding(.horizontal)
                         }
                     }
+                    .navigationTitle(pages[0].title)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .background(.darkBackground)
+                case .failed:
+                    Text("Please try again later.")
                 }
             }
         }
