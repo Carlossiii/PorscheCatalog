@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67057F35295B6BD900EF8132 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67057F34295B6BD900EF8132 /* PlayerView.swift */; };
+		67057F3B295B94FA00EF8132 /* porsche.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 67057F3A295B94FA00EF8132 /* porsche.mp4 */; };
 		672514092952AFC40038A08F /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672514082952AFC40038A08F /* ListView.swift */; };
 		6725140B2952B2C70038A08F /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6725140A2952B2C70038A08F /* CarView.swift */; };
 		6725140D2952B42A0038A08F /* FetchCarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6725140C2952B42A0038A08F /* FetchCarData.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67057F34295B6BD900EF8132 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		67057F3A295B94FA00EF8132 /* porsche.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = porsche.mp4; sourceTree = "<group>"; };
 		672514082952AFC40038A08F /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		6725140A2952B2C70038A08F /* CarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		6725140C2952B42A0038A08F /* FetchCarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchCarData.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		673CF44829412E1D00BA1841 = {
 			isa = PBXGroup;
 			children = (
+				67057F3A295B94FA00EF8132 /* porsche.mp4 */,
 				673CF45329412E1D00BA1841 /* PorscheCatalog */,
 				673CF45229412E1D00BA1841 /* Products */,
 			);
@@ -80,6 +85,7 @@
 				673CF4642941356800BA1841 /* Result.swift */,
 				6725140C2952B42A0038A08F /* FetchCarData.swift */,
 				673CF45629412E1D00BA1841 /* ContentView.swift */,
+				67057F34295B6BD900EF8132 /* PlayerView.swift */,
 				672514082952AFC40038A08F /* ListView.swift */,
 				6725140A2952B2C70038A08F /* CarView.swift */,
 				67846187294CFE9300C37AA2 /* RectangleView.swift */,
@@ -155,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67057F3B295B94FA00EF8132 /* porsche.mp4 in Resources */,
 				673CF45C29412E1F00BA1841 /* Preview Assets.xcassets in Resources */,
 				673CF45929412E1E00BA1841 /* Assets.xcassets in Resources */,
 			);
@@ -174,6 +181,7 @@
 				6725140D2952B42A0038A08F /* FetchCarData.swift in Sources */,
 				673150932954E757001BD1A7 /* ViewEraser.swift in Sources */,
 				67846186294CFE8900C37AA2 /* Color-theme.swift in Sources */,
+				67057F35295B6BD900EF8132 /* PlayerView.swift in Sources */,
 				67F762C829427953002E98B6 /* CarModel.swift in Sources */,
 				673CF45729412E1D00BA1841 /* ContentView.swift in Sources */,
 				673CF4652941356800BA1841 /* Result.swift in Sources */,
