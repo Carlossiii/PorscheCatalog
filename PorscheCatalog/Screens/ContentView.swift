@@ -11,13 +11,15 @@ struct ContentView: View {
     
     @Environment(\.scenePhase) var scenePhase
     
+    @State private var offset: CGFloat = 0
+    
     var body: some View {
         NavigationStack {
             NavigationLink(destination: ListView(), label: {
                 ZStack {
-
+                    
                     BgdFullScreenVideoView(videoName: "porsche")
-                        .overlay(Color.black.opacity(0.4))
+                        .overlay(Color.black.opacity(0.5))
                     
                     VStack {
                         
@@ -36,6 +38,12 @@ struct ContentView: View {
                             .fontDesign(.monospaced)
                             .font(.title)
                             .addGlowEffect(color1: Color(Color.RGBColorSpace.sRGB, red: 255/255, green: 50/255, blue: 50/255, opacity: 1), color2: Color(Color.RGBColorSpace.sRGB, red: 238/255, green: 50/255, blue: 50/255, opacity: 1), color3: Color(Color.RGBColorSpace.sRGB, red: 255/255, green: 50/255, blue: 50/255, opacity: 1))
+                            .offset(y: offset)
+                            .onAppear {
+                                withAnimation(Animation.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
+                                    self.offset = -10
+                                }
+                            }
                     }
                 }
             })

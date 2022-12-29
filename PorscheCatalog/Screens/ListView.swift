@@ -12,10 +12,11 @@ struct ListView: View {
     @State private var cars: [Car] = [.porsche356, .category911, .porscheGT1, .porsche912, .porsche914, .porsche918, .porsche924, .porsche928, .porsche944, .porsche959, .porsche968, .categoryBoxter, .porscheCarreraGT, .categoryCayman, .porscheCayenne, .porscheMacan, .porschePanamera, .porscheTaycan]
     
     @StateObject var carData = CarData()
+    @State private var searchText = ""
     
     var body: some View {
         NavigationStack {
-            List(cars, children: \.items) { item in
+            List(searchResults, children: \.items) { item in
                 NavigationLink(destination: CarView(carData: carData).onAppear() {
                     carData.selectedCar = item.pageId
                     Task {
@@ -25,7 +26,16 @@ struct ListView: View {
                     Text("\(item.name)")
                 }
             }
-            .navigationBarTitle("Porsche Catalog")
+            .navigationBarTitle("Models", displayMode: .inline)
+            .listStyle(.plain)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .automatic))
+        }
+    }
+    var searchResults: [Car] {
+        if searchText.isEmpty {
+            return cars
+        } else {
+            return cars.filter { $0.name.contains(searchText) }
         }
     }
 }

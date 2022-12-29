@@ -15,6 +15,7 @@ struct CarView: View {
         switch carData.loadingState {
         case .loading:
             return ProgressView()
+                //.background(.darkBackground)
                 .eraseToAnyView()
         case .loaded:
             let scroll = ScrollView {

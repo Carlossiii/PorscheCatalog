@@ -10,7 +10,8 @@ import SwiftUI
 
 extension ShapeStyle where Self == Color {
     static var darkBackground: Color {
-        Color(red: 0.5, green: 0.1, blue: 0.1)
+        Color(red: 0.8, green: 0.1, blue: 0.1)
+            .opacity(0.5)
     }
 
     static var lightBackground: Color {
