@@ -13,9 +13,11 @@ struct ContentView: View {
     
     @State private var offset: CGFloat = 0
     
+    @ObservedObject var classifier: ImageClassifier
+    
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: ListView(), label: {
+            NavigationLink(destination: ListView(classifier: classifier), label: {
                 ZStack {
                     
                     BgdFullScreenVideoView(videoName: "porsche")
@@ -52,14 +54,10 @@ struct ContentView: View {
             })
         }
     }
-    func simpleSuccess() {
-        let generator = UINotificationFeedbackGenerator()
-        generator.notificationOccurred(.success)
-    }
 }
     
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(classifier: ImageClassifier())
     }
 }

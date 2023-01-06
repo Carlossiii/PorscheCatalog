@@ -41,7 +41,7 @@ struct Car: Identifiable, Hashable {
     static let porsche944 = Car(name: "944", pageId: 24375)
     static let porsche959 = Car(name: "959", pageId: 355927)
     static let porsche968 = Car(name: "968", pageId: 24376)
-    static let categoryBoxter = Car(name: "Boxter", pageId: 48781658, items: [Car.boxter986, Car.boxter987, Car.boxter981, Car.boxter982])
+    static let categoryBoxter = Car(name: "Boxster", pageId: 48781658, items: [Car.boxter986, Car.boxter987, Car.boxter981, Car.boxter982])
     static let porscheCarreraGT = Car(name: "Carrera GT", pageId: 488804)
     static let categoryCayman = Car(name: "Cayman", pageId: 48781658, items: [Car.boxter987, Car.boxter981, Car.boxter982])
     static let porscheCayenne = Car(name: "Cayenne", pageId: 148952)
@@ -50,3 +50,5 @@ struct Car: Identifiable, Hashable {
     static let porscheTaycan = Car(name: "Taycan", pageId: 50428355)
     
 }
+
+let cars: [Car] = [.porsche356, .category911, .porscheGT1, .porsche912, .porsche914, .porsche918, .porsche924, .porsche928, .porsche944, .porsche959, .porsche968, .categoryBoxter, .porscheCarreraGT, .categoryCayman, .porscheCayenne, .porscheMacan, .porschePanamera, .porscheTaycan]
