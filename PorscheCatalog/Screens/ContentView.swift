@@ -17,7 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            NavigationLink(destination: ListView(classifier: classifier), label: {
+            NavigationLink(destination: TablView(classifier: classifier), label: {
                 ZStack {
                     
                     BgdFullScreenVideoView(videoName: "porsche")

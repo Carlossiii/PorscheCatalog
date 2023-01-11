@@ -12,7 +12,12 @@ struct AIView: View {
     @State var uiImage: UIImage?
     @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
     
+    @StateObject var carData = CarData()
+    
     @ObservedObject var classifier: ImageClassifier
+    
+    @Binding var selection: TablView.Item
+    @EnvironmentObject var truth: SourceOfTruth
     
     var body: some View {
         NavigationStack {
@@ -20,16 +25,22 @@ struct AIView: View {
                 VStack {
                     Group {
                         if let imageClass = classifier.imageClass {
-                            HStack{
+                            HStack {
                                 Text("You model is the:")
-                                    .font(.headline)
-                                Text(imageClass)
-                                    .bold()
+                                    .font(.title2)
+                                
+                                Button(action: {
+                                    self.selection = .first
+                                    self.truth.searchText = imageClass
+                                }) {
+                                    Text(imageClass)
+                                        .font(.title2)
+                                }
                             }
                         } else {
                             HStack{
                                 Text("You model is the: -")
-                                    .font(.headline)
+                                    .font(.title2)
                             }
                         }
                     }
@@ -79,11 +90,13 @@ struct AIView: View {
             }
         }
         .padding()
+        .padding(.bottom, 50)
     }
 }
 
+
 struct AIView_Previews: PreviewProvider {
     static var previews: some View {
-        AIView(classifier: ImageClassifier())
+        AIView(classifier: ImageClassifier(), selection: .constant(.first))
     }
 }

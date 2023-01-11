@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InfoView: View {
     var body: some View {
-        
         VStack {
             
             Spacer()
@@ -23,7 +22,10 @@ struct InfoView: View {
             Text("2023")
                 .fontDesign(.monospaced)
                 .addGlowEffect(color1: Color(Color.RGBColorSpace.sRGB, red: 255/255, green: 50/255, blue: 50/255, opacity: 1), color2: Color(Color.RGBColorSpace.sRGB, red: 238/255, green: 50/255, blue: 50/255, opacity: 1), color3: Color(Color.RGBColorSpace.sRGB, red: 255/255, green: 50/255, blue: 50/255, opacity: 1))
+            
+            Spacer()
         }
+        .padding(.bottom, 50)
     }
 }
 

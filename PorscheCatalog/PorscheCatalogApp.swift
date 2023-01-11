@@ -11,7 +11,7 @@ import SwiftUI
 struct PorscheCatalogApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(classifier: ImageClassifier())
+            ContentView(classifier: ImageClassifier()).environmentObject(SourceOfTruth())
         }
     }
 }
