@@ -53,6 +53,6 @@ struct TablView: View {
 
 struct TablView_Previews: PreviewProvider {
     static var previews: some View {
-        TablView(classifier: ImageClassifier())
+        TablView(classifier: ImageClassifier()).environmentObject(SourceOfTruth())
     }
 }

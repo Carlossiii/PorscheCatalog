@@ -42,7 +42,7 @@ public struct DefaultTabBarStyle: TabBarStyle {
             }
             .background(
                 Color(
-                    red:   0 / 255,
+                    red:   15 / 255,
                     green: 0 / 255,
                     blue:  0 / 255,
                     opacity: 1

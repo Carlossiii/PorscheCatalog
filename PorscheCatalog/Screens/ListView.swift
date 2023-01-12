@@ -28,10 +28,13 @@ struct ListView: View {
                 .padding(.vertical, 8)
                 .fontDesign(.monospaced)
             }
-            .searchable(text: $truth.searchText, placement: .navigationBarDrawer(displayMode: .always))
+            .searchable(text: $truth.searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Find your model")
             .listStyle(.plain)
             .padding(.bottom, 50)
         }
+        .navigationTitle("Car Models")
+        .toolbarBackground(Color.tabsBackground, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
     }
     
     var searchResults: [Car] {
@@ -45,6 +48,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(classifier: ImageClassifier())
+        ListView(classifier: ImageClassifier()).environmentObject(SourceOfTruth())
     }
 }

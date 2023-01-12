@@ -25,6 +25,9 @@ struct InfoView: View {
             
             Spacer()
         }
+        .navigationTitle("Information")
+        .toolbarBackground(Color.tabsBackground, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
         .padding(.bottom, 50)
     }
 }

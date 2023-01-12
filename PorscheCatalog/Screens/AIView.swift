@@ -89,6 +89,9 @@ struct AIView: View {
                 ImagePicker(uiImage: $uiImage, isPresenting:  $isPresenting, sourceType: $sourceType)
             }
         }
+        .navigationTitle("AI Scanner")
+        .toolbarBackground(Color.tabsBackground, for: .navigationBar)
+        .navigationBarBackButtonHidden(true)
         .padding()
         .padding(.bottom, 50)
     }
@@ -97,6 +100,6 @@ struct AIView: View {
 
 struct AIView_Previews: PreviewProvider {
     static var previews: some View {
-        AIView(classifier: ImageClassifier(), selection: .constant(.first))
+        AIView(classifier: ImageClassifier(), selection: .constant(.first)).environmentObject(SourceOfTruth())
     }
 }
