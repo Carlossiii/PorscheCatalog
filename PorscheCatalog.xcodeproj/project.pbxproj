@@ -46,6 +46,10 @@
 		678AC25429652D0C0004F877 /* ImageClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678AC25329652D0C0004F877 /* ImageClassifier.swift */; };
 		678C52B62967DB0700FA70ED /* PorscheCatalog4.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 678C52B52967DB0700FA70ED /* PorscheCatalog4.mlmodel */; };
 		6792EB51296F42E600B7589C /* SearchText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6792EB50296F42E600B7589C /* SearchText.swift */; };
+		679A92C2297222EB00D0D48A /* List.gif in Resources */ = {isa = PBXBuildFile; fileRef = 679A92BE297222E900D0D48A /* List.gif */; };
+		679A92C3297222EB00D0D48A /* AI.gif in Resources */ = {isa = PBXBuildFile; fileRef = 679A92BF297222EA00D0D48A /* AI.gif */; };
+		679A92C4297222EB00D0D48A /* Welcome.gif in Resources */ = {isa = PBXBuildFile; fileRef = 679A92C0297222EA00D0D48A /* Welcome.gif */; };
+		679A92C5297222EB00D0D48A /* Car.gif in Resources */ = {isa = PBXBuildFile; fileRef = 679A92C1297222EB00D0D48A /* Car.gif */; };
 		67C9E34A2963D74A0092043E /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E3492963D74A0092043E /* InfoView.swift */; };
 		67C9E34C2963D75B0092043E /* AIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C9E34B2963D75B0092043E /* AIView.swift */; };
 		67F762C829427953002E98B6 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F762C729427953002E98B6 /* CarModel.swift */; };
@@ -92,6 +96,10 @@
 		678AC25329652D0C0004F877 /* ImageClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageClassifier.swift; sourceTree = "<group>"; };
 		678C52B52967DB0700FA70ED /* PorscheCatalog4.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = PorscheCatalog4.mlmodel; sourceTree = "<group>"; };
 		6792EB50296F42E600B7589C /* SearchText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchText.swift; sourceTree = "<group>"; };
+		679A92BE297222E900D0D48A /* List.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = List.gif; sourceTree = "<group>"; };
+		679A92BF297222EA00D0D48A /* AI.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = AI.gif; sourceTree = "<group>"; };
+		679A92C0297222EA00D0D48A /* Welcome.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Welcome.gif; sourceTree = "<group>"; };
+		679A92C1297222EB00D0D48A /* Car.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Car.gif; sourceTree = "<group>"; };
 		67C9E3492963D74A0092043E /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		67C9E34B2963D75B0092043E /* AIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIView.swift; sourceTree = "<group>"; };
 		67F762C729427953002E98B6 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 		673CF44829412E1D00BA1841 = {
 			isa = PBXGroup;
 			children = (
+				679A92C6297222F400D0D48A /* Readme */,
 				673CF45329412E1D00BA1841 /* PorscheCatalog */,
 				673CF45229412E1D00BA1841 /* Products */,
 			);
@@ -301,6 +310,17 @@
 			path = AI;
 			sourceTree = "<group>";
 		};
+		679A92C6297222F400D0D48A /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				679A92BF297222EA00D0D48A /* AI.gif */,
+				679A92C1297222EB00D0D48A /* Car.gif */,
+				679A92BE297222E900D0D48A /* List.gif */,
+				679A92C0297222EA00D0D48A /* Welcome.gif */,
+			);
+			path = Readme;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,8 +383,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				679A92C3297222EB00D0D48A /* AI.gif in Resources */,
+				679A92C2297222EB00D0D48A /* List.gif in Resources */,
 				673CF45C29412E1F00BA1841 /* Preview Assets.xcassets in Resources */,
+				679A92C4297222EB00D0D48A /* Welcome.gif in Resources */,
 				673CF45929412E1E00BA1841 /* Assets.xcassets in Resources */,
+				679A92C5297222EB00D0D48A /* Car.gif in Resources */,
 				6731565D295CEE3600A76EC2 /* porsche.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
