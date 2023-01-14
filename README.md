@@ -20,15 +20,18 @@ AI working: Here you are presented with the AI trained to recognize the Models a
   <tr>
     <td>First screen</td>
      <td>List page</td>
-     <td>Car detailed</td>
-     <td>AI working</td>
   </tr>
   <tr>
     <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/Welcome.gif" width=200 height=433></td>
     <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/List.gif" width=200 height=433></td>
-    <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/Car.gif" width=200 height=433></td>
-    <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/AI.gif" width=200 height=433></td>
   </tr>
+     <td>Car detailed</td>
+     <td>AI working</td>
+  </tr>
+  <tr>
+     <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/Car.gif" width=200 height=433></td>
+    <td><img src="https://github.com/Carlossiii/PorscheCatalog/blob/main/Readme/AI.gif" width=200 height=433></td>
+ </tr>
  </table>
  
 ### What was the objective
