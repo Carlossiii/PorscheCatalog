@@ -2,7 +2,7 @@
 
 This app is a tribute to the German auto maker, Porsche. 
 
-It has a list of some Porsche cars that I found more important
+It has a list of Porsche cars that I think are most important.
 
 ## How it works
 
