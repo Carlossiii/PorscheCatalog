@@ -40,6 +40,6 @@ Since the first months of studying Swift, I was planning on developing something
 
 After some research the Wikipedia API was the chosen one to do the information part. It wasn't easy at first but when you get how it works, it becomes easy. This part improved a lot my knowledge since I had so many struggles to put together in a concise way.
 
-Once everything was great in that area, I went to the AI part. Since I heard about CoreML, I got excited to do something with it and this app was the perfect chance. Unlucky for me, Porsches has a really similar looking and after 300+ images for training and 100+ for testing, the AI only has 50% of accuracy, but it works okay given the work!
+Once everything was great in that area, I went to the AI part. Since I heard about CoreML, I got excited to do something with it and this app was the perfect chance. Unlucky for me, Porsches has a really similar looking and after 350+ images for training and 80+ for testing, the AI only has 50% of accuracy, but it works okay given the work!
 
 So, after a lot of learning, the objective for this app was achieved and surpassed!
